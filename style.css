@@ -1,0 +1,645 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Yekan", "Lato";
+}
+
+body {
+    line-height: 1;
+    direction: rtl;
+    background-image: url(images/bgPattern.jpg);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Yekan';
+    src: url(fonts/Yekan.eot);
+    src: url('fonts/Yekan.eot?#iefix-wwn5ej') format('embedded-opentype'),
+        url('fonts/Yekan.woff?-wwn5ej') format('woff'),
+        url('fonts/Yekan.ttf?-wwn5ej') format('truetype'),
+        url('fonts/Yekan.svg?-wwn5ej#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.jumbotron {
+    border-radius: 0;
+}
+
+.header {
+    background-image: url(images/headerimg.webp);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.filter {
+    background: rgba(43, 46, 74, .7);
+    height: 300px;
+    margin: 0;
+}
+
+.mobileOpenContainer {
+    height: 65px;
+}
+
+.showNavSearch {
+    padding: 8px 10px 7px;
+    margin-top: 10px;
+    float: left;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+#search {
+    float: right;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 270px;
+}
+
+nav {
+    display: none;
+}
+
+.reqSearchContainer {
+    display: none;
+}
+
+.reqMobileContainer {
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+.requestMobile {
+    width: 50%;
+    padding: 15px 10px;
+    border: none;
+    background-color: #e84545;
+    box-shadow: 0 5px 20px rgba(232, 69, 69, .6);
+    border-radius: 4px;
+    color: whitesmoke;
+    font-family: "Lalezar";
+    font-size: 20px;
+    transition: .2s;
+}
+
+.requestMobile:hover {
+    background-color: #de3333;
+}
+
+#req {
+    margin-left: 5px;
+}
+
+#sup {
+    margin-right: 5px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2b2e4a;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+#mobileSearch {
+    right: 0;
+}
+
+.sidebar a {
+    padding: 45px 8px 5px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Lalezar";
+    color: whitesmoke;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #e84545;
+    text-shadow: 0 3px 10px rgba(232, 69, 69, .5);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    background-color: #e84545;
+    box-shadow: 0 3px 15px rgba(232, 69, 69, .4);
+    text-align: center;
+    padding: 12px 20px 6px;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.sidebar .closebtn:hover {
+    background-color: #de3333;
+    color: whitesmoke;
+}
+
+.mobileSearchbarContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.mobileSearchbar {
+    background-color: #23253b;
+    border: 2px solid #23253b;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    padding: 5px 15px 5px 5px;
+    width: 220px;
+    transition: .2s;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.mobileSearchbar:focus {
+    border: 2px solid #e84545;
+    border-left: none;
+}
+
+.mobileSearchbarBtn {
+    background-color: #e84545;
+    box-shadow: -5px 2px 20px rgba(232, 69, 69, .5);
+
+    border: none;
+    border-radius: 4px 0 0 4px;
+    color: white;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.mobileSearchbarBtn span {
+    display: none;
+}
+
+.mobileSearchbarButton:hover {
+    background-color: #de3333;
+}
+
+.main {
+    width: 100% !important;
+    padding: 0;
+}
+
+.carousel {
+    background-color: #f2f2f2;
+    border: 1px solid #DCDCDC;
+    border-right: none;
+    border-left: none;
+    padding: 20px 0 5px;
+    text-align: center;
+}
+
+.carouselTitle {
+    background-color: #DCDCDC;
+    width: 40%;
+    display: inline-block;
+    margin: -10px 0 10px;
+    padding: 15px 10px;
+    border-radius: 4px;
+    color: #2b2e4a;
+}
+
+.carouselTitle i {
+    font-size: 25px;
+}
+
+.carouselTitle h2 {
+    font-family: "Lalezar";
+    font-size: 20px;
+    padding-top: 8px;
+}
+
+.owl-carousel {
+    direction: ltr;
+}
+
+.slide {
+    width: 110px !important;
+    display: inline;
+    position: relative;
+}
+
+@media only screen and (min-width: 480px) {
+    .header {
+        height: 350px;
+    }
+
+    .filter {
+        height: 350px;
+    }
+
+    .showNavSearch {
+        padding: 8px 20px 7px;
+        margin-top: 15px;
+    }
+
+    .logo {
+        margin-top: 40px;
+        width: 350px;
+    }
+
+    .reqMobileContainer {
+        margin: 40px 0 35px;
+    }
+
+    .requestMobile {
+        font-size: 23px;
+    }
+    
+    .carouselTitle {
+        width: 30%;
+    }
+    
+    .carouselTitle i {
+        font-size: 30px;
+    }
+    
+    .carouselTitle h2 {
+        font-size: 24px;
+        padding-top: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        margin-top: -50px;
+        height: 310px;
+    }
+    
+    .filter {
+        height: 310px;
+    }
+    
+    .mobileOpenContainer {
+        display: none;
+    }
+    
+    .container {
+        width: 700px;
+        padding: 50px 0 0 0;
+    }
+    
+    nav {
+        display: block;
+        float: right;
+        margin-top: 65px;
+    }
+    
+    .navbar {
+        padding: 0;
+    }
+    
+    .nav {
+        color: white;
+        display: inline-block;
+        padding: 10px 15px;
+        margin-left: 7px;
+        background-color: rgba(102,106,140,.1);
+        border-radius: 4px;
+        transition: .2s;
+    }
+    
+    .nav:hover {
+        background-color: #363a5e;
+    }
+    
+    .reqMobileContainer {
+        display: none;
+    }
+    
+    .logo {
+        float: left;
+        width: 300px;
+    }
+    
+    .reqSearchContainer {
+        display: block;
+        margin-top: 180px;
+    }
+    
+    .request {
+        background-color: #e84545;
+        box-shadow: 0 5px 20px rgba(232, 69, 69, .6);
+        border: none;
+        padding: 10px 15px;
+        color: whitesmoke;
+        border-radius: 4px;
+        font-size: 17px;
+        font-family: "Lalezar";
+        float: right;
+        margin-left: 10px;
+        transition: .2s;
+    }
+    
+    .request i {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    
+    .request:hover {
+        background-color: #de3333;
+    }
+    
+    .searchContainer {
+        float: left;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .search {
+        padding: 3px 10px;
+        border-radius: 0 4px 4px 0;
+        font-size: 18px;
+        border: 2px solid #363a5e;
+        border-left: none;
+        width: 360px;
+        color: #666a8c;
+        margin: 1px 0 0 -3px;
+        background-color: #363a5e;
+        transition: .2s;
+    }
+    
+    .search:hover {
+        background-color: #313454;
+        border: 2px solid #313454;
+        border-left: none;
+    }
+    
+    .search:focus {
+        border: 2px solid #363a5e;
+        border-left: none;
+    }
+    
+    .searchBtn {
+        float: left;
+        background-color: #363a5e;
+        padding: 10px 15px 6px;
+        margin: 1px 0 0 0;
+        border-radius: 4px 0 0 4px;
+        font-size: 20px;
+        color: #666a8c;
+    }
+    
+    .main {
+        width: 700px !important;
+        padding-top: 0 !important;
+        margin-top: -20px;
+    }
+    
+    .carousel {
+        border-radius: 4px;
+        border: 1px solid #D3D3D3;
+    }
+    
+    .owl-carousel {
+        padding: 0 0 10px;
+    }
+    
+    .carouselTitle {
+        background-color: #E8E8E8	;
+        padding: 10px;
+        width: 100%;
+        border-radius: 0 0 4px 4px;
+        margin: -20px 0 0;
+    }
+    
+    .carouselTitle i {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        height: 350px;
+    }
+    
+    .filter {
+        height: 350px;
+    }
+    
+    .container {
+        width: 850px;
+        padding-top: 65px;
+    }
+    
+    .request {
+        padding: 15px 15px;
+        font-size: 22px;
+    }
+    
+    .search {
+        width: 465px;
+        font-size: 22px;
+        margin-top: 0;
+        padding: 7px 10px;
+    }
+    
+    .searchBtn {
+        padding: 17px 15px 13px;
+        margin-top: 0;
+    }
+    
+    .main {
+        width: 850px !important;
+        margin-top: -30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+    
+    .search {
+        width: 615px;
+    }
+    
+    .main {
+        width: 1000px !important;
+    }
+}

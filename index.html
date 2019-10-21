@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A WordPress template for downloading movies, tv shows, books and more">
+    <meta name="robots" content="index, follow" />
+    <title>سکورچ - وبسایتی برای دانلود</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar|Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <header class="header jumbotron" role="heading" aria-level="1">
+        <div class="filter">
+            <div class="container">
+                <div class="mobileOpenContainer">&nbsp;
+                    <span onclick="openNav()" class="showNavSearch"><i class="fas fa-bars"></i></span>
+                    <span onclick="openSearch()" class="showNavSearch" id="search"><i class="fas fa-search"></i></span>
+                </div>
+                <div class="logoNavContainer" role="img">
+                    <a href=""><img class="logo" src="images/Logo.svg" alt="logo"></a>
+                    <nav>
+                        <ul class="navbar" role="navigation">
+                            <a href="#">
+                                <li class="nav">خانه</li>
+                            </a>
+                            <a href="#">
+                                <li class="nav">تبلیغات</li>
+                            </a>
+                            <a href="#">
+                                <li class="nav">تماس با ما</li>
+                            </a>
+                            <a href="#">
+                                <li class="nav">خرید قالب</li>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="reqSearchContainer">
+                    <button class="request" role="button"><i class="fas fa-film"></i>درخواست انتشار</button>
+                    <button class="request" role="button"><i class="fas fa-heart"></i>حمایت از ما</button>
+                    <div class="searchContainer">
+                        <label>
+                            <input class="search" placeholder="جستوجو..." aria-label="Searchbar">
+                            <a href="#"><span class="searchBtn" aria-label="Search button"><i class="fas fa-search"></i></span></a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="reqMobileContainer">
+                    <button class="requestMobile" id="req" role="button">درخواست انتشار</button>
+                    <button class="requestMobile" id="sup" role="button">حمایت از ما</button>
+                </div>
+
+
+                <div id="mobileNavbar" class="sidebar" role="navigation">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">خانه</a>
+                    <a href="#">تبلیغات</a>
+                    <a href="#">تماس با ما</a>
+                    <a href="#">خرید قالب</a>
+                </div>
+                <div id="mobileSearch" class="sidebar" role="search">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+                    <div class="mobileSearchbarContainer">
+                        <input type="search" class="mobileSearchbar" placeholder="جستوجو..." aria-label="Searchbar">
+                        <button class="mobileSearchbarBtn" aria-label="Search"><span>جستوجو</span><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container main" role="main">
+        <div class="carousel">
+            <div class="carouselTitle">
+                <i class="fas fa-star"></i>
+                <h2>برترین مطالب</h2>
+            </div>
+            <div class="owl-carousel">
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+                <a href="#"><div class="slide"><img src="images/moviePoster1.jpg"></div></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/6a4eda6f11.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body></html>

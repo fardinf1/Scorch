@@ -1,0 +1,25 @@
+0.2.1  
+    - Removed local icons and added CDN.
+    - Added Favicon
+    
+0.2.2
+    - Slight SEO imporovements.
+    
+0.2.3
+    - More Optimization
+    
+0.3
+    - Header Finsihed
+
+0.3.1
+    - Slight optimizations.
+    - Fixed slight problem with the searchbar in +1200px resolutions not showing properly
+    
+0.3.2
+    - Added more code for accessibility
+    
+0.3.3
+    - Changed header image format from jpg to webp for optimization purposes.
+    
+0.3.4
+    - Added carousel.
